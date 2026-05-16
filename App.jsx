@@ -79,8 +79,7 @@ function PowerTab() {
   return (
     <div>
       <p className="description">
-        Enter two values to compute the dB change — the original program's
-        calculation, with input validation and a corrected doubling formula.
+        Enter two values to compute the dB change - either power or pressure/voltage depending on the mode. 
       </p>
 
       <ModeToggle mode={mode} onChange={setMode} />
@@ -150,7 +149,7 @@ function InverseTab() {
   return (
     <div>
       <p className="description">
-        Reverse of the original: given a dB value, find the power or pressure ratio.
+        Given a dB value, find the power or pressure ratio.
       </p>
 
       <ModeToggle mode={mode} onChange={setMode} />
@@ -222,7 +221,7 @@ function ReferenceTab() {
       </div>
 
       <div className="bug-note">
-        <div className="bug-title">Bug fixed from original</div>
+        <div className="bug-title">Bug fixed</div>
         <div className="bug-body">
           The original used <code>level = db / 3</code>.
           The correct divisor is <code>10·log₁₀(2) ≈ 3.0103</code>.
@@ -248,7 +247,7 @@ function App() {
     <div>
       <h1>Decibel Calculator</h1>
       <p className="subtitle">
-        JS port of DecibelCalculator.cpp · validation + inverse + pressure mode added
+        DecibelCalculator with Validation, Inverse & Pressure mode
       </p>
 
       <nav className="tabs" role="tablist">
